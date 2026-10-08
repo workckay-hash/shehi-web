@@ -5,12 +5,20 @@ const root = __dirname;
 const output = path.join(root, 'dist');
 const audioBaseUrl = process.env.SHEHI_AUDIO_BASE_URL?.trim().replace(/\/+$/, '');
 
-if (!audioBaseUrl) {
-  throw new Error('Set SHEHI_AUDIO_BASE_URL to your public audio bucket URL before building.');
+if (audioBaseUrl && new URL(audioBaseUrl).protocol !== 'https:') {
+  throw new Error('SHEHI_AUDIO_BASE_URL must use HTTPS.');
 }
 
-if (new URL(audioBaseUrl).protocol !== 'https:') {
-  throw new Error('SHEHI_AUDIO_BASE_URL must use HTTPS.');
+let audioConfig = fs.readFileSync(path.join(root, 'audio-config.js'), 'utf8');
+if (audioBaseUrl) {
+  const baseUrlSetting = /^window\.SHEHI_AUDIO_BASE_URL\s*=.*;$/m;
+  if (!baseUrlSetting.test(audioConfig)) {
+    throw new Error('audio-config.js is missing the SHEHI_AUDIO_BASE_URL setting.');
+  }
+  audioConfig = audioConfig.replace(
+    baseUrlSetting,
+    `window.SHEHI_AUDIO_BASE_URL = ${JSON.stringify(audioBaseUrl)};`
+  );
 }
 
 fs.rmSync(output, { recursive: true, force: true });
@@ -26,10 +34,7 @@ for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
   }
 }
 
-fs.writeFileSync(
-  path.join(output, 'audio-config.js'),
-  `window.SHEHI_AUDIO_BASE_URL = ${JSON.stringify(audioBaseUrl)};\n`
-);
+fs.writeFileSync(path.join(output, 'audio-config.js'), audioConfig);
 fs.copyFileSync(path.join(root, 'script.js'), path.join(output, 'script.js'));
 
 console.log('Built static site in dist/ (audio files are hosted separately).');

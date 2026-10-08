@@ -241,9 +241,17 @@ const artist = 'Shehi Ahmad Tajul Izzi';
 const audioBaseUrl = typeof window.SHEHI_AUDIO_BASE_URL === 'string'
   ? window.SHEHI_AUDIO_BASE_URL.trim().replace(/\/+$/, '')
   : '';
+const audioFileIds = window.SHEHI_AUDIO_FILE_IDS && typeof window.SHEHI_AUDIO_FILE_IDS === 'object'
+  ? window.SHEHI_AUDIO_FILE_IDS
+  : {};
 
 function resolveAudioUrl(path) {
-  if (!path || !audioBaseUrl) return path || null;
+  if (!path) return null;
+  const fileId = audioFileIds[path];
+  if (typeof fileId === 'string' && fileId) {
+    return `https://drive.google.com/uc?export=download&confirm=t&id=${encodeURIComponent(fileId)}`;
+  }
+  if (!audioBaseUrl) return null;
   return `${audioBaseUrl}/${path.split('/').map(encodeURIComponent).join('/')}`;
 }
 
@@ -284,7 +292,6 @@ const audioFiles = {
   'gaskiyar-nufi': 'music/Gaskiyar Nufi.mp3',
   'zahra-mama': 'music/ZAHRA MAMA.mp3',
   arifumbillah: 'music/Arifun Billah.mp3',
-  'labbaika-masani': 'music/Labbaika Masani.mp3',
   'salamu-alaika-track': 'music/Salamu Alaika.mp3',
   'kyakkyawar-makoma': 'music/Kyakykyawar Makoma.mp3',
   'mai-tsarkin-ruhi': 'music/Mai Tsarkin Ruhi.mp3',
