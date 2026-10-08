@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shehi Ahmad Tajul Izzi | Platform na waƙoƙi, Majalisi, albums da rikodi cikin Hausa da Arabic da English." />
+    <meta name="theme-color" content="#0c120f" />
+    <meta property="og:title" content="Shehi Ahmad Tajul Izzi" />
+    <meta property="og:description" content="Waƙoƙi, Majalisai, Majalisi da rikodi na Shehi Ahmad Tajul Izzi." />
+    <meta property="og:type" content="website" />
+    <title>Shehi Ahmad Tajul Izzi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="audio-config.js"></script>
+    <script defer src="script.js?v=20261007"></script>
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="#home" class="brand" aria-label="Shehi Ahmad Tajul Izzi home">
+          <div class="brand-mark">S</div>
+          <div class="brand-copy">
+            <span class="brand-name" data-i18n="official">Gida na hukuma</span>
+            <span class="brand-title">SHEHI AHMAD TAJUL IZZI</span>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#home" class="active" data-i18n="home">Gida</a>
+          <a href="#featured" data-i18n="latest">Sabbin Waƙoƙi</a>
+          <a href="#all-music" data-i18n="music">Waƙoƙi</a>
+          <a href="#madarisi" data-i18n="madarisi">Majalisi</a>
+          <a href="#all-music" data-i18n="records">Rikodi</a>
+        </nav>
+
+        <div class="top-actions">
+          <label class="search-box" aria-label="Global search">
+            <span>⌕</span>
+            <input id="global-search" type="search" role="searchbox" aria-autocomplete="list" aria-controls="search-results-panel" aria-expanded="false" autocomplete="off" data-i18n-placeholder="search" placeholder="Bincika waƙoƙi, albums, majalisi ko rikodi..." />
+          </label>
+
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button class="lang-option" type="button" data-lang="ha">HA</button>
+            <button class="lang-option" type="button" data-lang="ar">AR</button>
+            <button class="lang-option active" type="button" data-lang="en">EN</button>
+          </div>
+
+          <button class="icon-btn user-icon" type="button" aria-label="Profile">◌</button>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#home" data-i18n="home">Gida</a>
+        <a href="#featured" data-i18n="latest">Sabbin Waƙoƙi</a>
+        <a href="#all-music" data-i18n="music">Waƙoƙi</a>
+        <a href="#madarisi" data-i18n="madarisi">Majalisi</a>
+        <a href="#all-music" data-i18n="records">Rikodi</a>
+      </div>
+    </div>
+
+    <main>
+      <section id="home" class="hero section-shell">
+        <div class="container">
+          <div class="hero-panel" style="background-image: url('items/2025.png');">
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+              <div class="hero-copy">
+                <span class="eyebrow" data-i18n="verified">Mai tantancewa</span>
+                <h1 data-i18n="heroTitle">Saurari Waƙoƙin Shehi Ahmad Tajul Izzi</h1>
+                <p class="hero-sub" data-i18n="heroSubtitle">Ku saurari sabbin waƙoƙi, Majalisi, Majalisai da sauran rikodin Shehi Ahmad Tajul Izzi a wuri guda.</p>
+                <div class="hero-actions">
+                  <button class="primary-btn" type="button" data-open-song="song-001" data-i18n="playNow">▶ Saurara Yanzu</button>
+                  <button class="secondary-btn" type="button" data-scroll="#featured" data-i18n="viewMusic">Duba Waƙoƙi</button>
+                </div>
+              </div>
+
+              <aside class="feature-spotlight">
+                <div class="spotlight-card">
+                  <div class="spotlight-art">
+                    <img src="items/daiman.png" alt="Daiman — Shehi Ahmad Tajul Izzi" />
+                  </div>
+                  <div class="spotlight-meta">
+                    <span class="spotlight-tag" data-i18n="latestRelease">Sabon Fitaccen</span>
+                    <h3>Da’irar Addini</h3>
+                    <p>Shehi Ahmad Tajul Izzi</p>
+                  </div>
+                  <div class="mini-track">
+                    <div class="mini-cover">
+                      <img src="items/daiman.png" alt="Daiman" />
+                    </div>
+                    <div class="mini-text">
+                      <strong>Daiman</strong>
+                      <span>03:56</span>
+                    </div>
+                    <div class="mini-controls">
+                      <button class="icon-btn small" type="button" data-play-id="song-001">▶</button>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="section-shell">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="featuredMusic">Waƙoƙin Da Aka Fi So</h2>
+            <div class="chips">
+              <button class="chip active" type="button" data-filter="featured" data-i18n="featured">Fitowa</button>
+              <button class="chip" type="button" data-filter="new" data-i18n="newTag">Sabo</button>
+              <button class="chip" type="button" data-filter="popular" data-i18n="popular">Mafi shahara</button>
+              <button class="chip" type="button" data-filter="latest" data-i18n="latestShort">Sabuntawa</button>
+            </div>
+          </div>
+          <div id="featured-grid" class="grid music-grid"></div>
+        </div>
+      </section>
+
+      <section id="madarisi" class="section-shell">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="madarisiHeading">Majalisi</h2>
+            <p class="section-sub" data-i18n="madarisiText">Saurari tarin Majalisi da sauran rikodin addini na Shehi Ahmad Tajul Izzi.</p>
+          </div>
+          <div id="madarisi-grid" class="grid madarisi-grid"></div>
+        </div>
+      </section>
+
+      <section id="all-music" class="section-shell">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="allSongs">Duk Waƙoƙi</h2>
+            <div class="section-controls">
+              <select id="music-filter-select" aria-label="Sort music">
+                <option value="featured" data-i18n="featured">Fitowa</option>
+                <option value="latest" data-i18n="latestShort">Sabuntawa</option>
+                <option value="popular" data-i18n="popular">Mafi shahara</option>
+              </select>
+            </div>
+          </div>
+          <div id="all-music-list" class="table-list"></div>
+        </div>
+      </section>
+
+      <section id="favorites" class="section-shell">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="favoritesHeading">Waƙoƙina</h2>
+          </div>
+          <div id="favorites-list" class="table-list"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section-shell about-section">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="aboutHeading">Game da Shi</h2>
+          </div>
+          <div class="profile-layout">
+            <div class="profile-card">
+              <img src="items/profile.jpeg" alt="Shehi Ahmad Tajul Izzi" />
+              <div class="body">
+                <h3>Shehi Ahmad Tajul Izzi</h3>
+                <div class="stats">
+                  <div class="stat-box"><strong>25</strong><span data-i18n="madarisiShort">Majalisi</span></div>
+                  <div class="stat-box"><strong>120K+</strong><span data-i18n="listeners">Masu sauraro</span></div>
+                  <div class="stat-box"><strong>4.9</strong><span data-i18n="rating">Matsayi</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-copy">
+              <p data-i18n="profileText1">Shehi Ahmad Tajul Izzi ya kasance mai gabatarwa a cikin waƙoƙin addini, yabo, da furucin ibada a cikin al’adun Hausa da addinin Musulunci. Ya haɗa al’adu da salon zamani domin ya isa ga masu sauraro na duka kabilu da tsararraki.</p>
+              <p data-i18n="profileText2">Ta hanyar waƙoƙi, Majalisai, da tarin bidiyo da rikodi na rayuwa, ya ƙirƙiri yanayin al’umma mai zurfi da ya dogara da imani, hikima, da kuma haɗin kai tsakanin jama’a.</p>
+              <div class="socials">
+                <a href="https://www.youtube.com/@shehiahmadtajulizzi9800" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://www.instagram.com/shehi_ahmad_tajul_izzi?utm_source=ig_web_button_share_sheet&amp;stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.youtube.com/redirect?event=channel_description&amp;redir_token=QUZZTVljRklIV0dKbVVPMmQ5ZFZFTEFGWmpuR3xBTl9pYzRmNjA4WmhqOTlBR2U2Y0xXTDlkQjZTREttMU55SmF4UXN3TUhxR1VJWXZpTFRYS0tLZ1ZjTlUyWDFrc0N3Tld2VzVQT21BX0VEN3Z6OVUteGJTZjR5N19TX051c29o&amp;q=https%3A%2F%2Fm.facebook.com%2Fshehimaitajulizzi%2F%3Ftsid%3D0.5534872655628373%26source%3Dresult" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.tiktok.com/@shehi_ahmad_tajul_izzi" target="_blank" rel="noopener noreferrer">TikTok</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="search-results-panel" class="search-results-panel hidden"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand brand-footer">
+            <div class="brand-mark">S</div>
+            <div class="brand-copy">
+              <span class="brand-name" data-i18n="official">Gida na hukuma</span>
+              <span class="brand-title">SHEHI AHMAD TAJUL IZZI</span>
+            </div>
+          </div>
+          <p data-i18n="footerText">Platform na waƙoƙi, Majalisi, da rikodi na Shehi Ahmad Tajul Izzi a Hausa, Arabic da English.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home" data-i18n="home">Gida</a>
+          <a href="#featured" data-i18n="music">Waƙoƙi</a>
+          <a href="#madarisi" data-i18n="madarisi">Majalisi</a>
+        </div>
+        <div class="footer-lang">
+          <span data-i18n="languageLabel">Harshe</span>
+          <div class="lang-switcher inline-lang">
+            <button class="lang-option" type="button" data-lang="ha">HA</button>
+            <button class="lang-option" type="button" data-lang="ar">AR</button>
+            <button class="lang-option active" type="button" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Shehi Ahmad Tajul Izzi. Duk haƙƙoƙi a kiyaye.</span>
+        <span class="dev-signature">This website is developed by CKay</span>
+      </div>
+    </footer>
+
+    <div class="bottom-player">
+      <div class="player-wrap container">
+        <div class="player-art">
+          <img id="mini-cover" src="items/daiman.png" alt="Now playing" />
+        </div>
+        <div class="player-text">
+          <strong id="mini-title">Daiman</strong>
+          <span id="mini-artist">Shehi Ahmad Tajul Izzi</span>
+        </div>
+        <div class="player-controls">
+          <button class="icon-btn small" type="button" data-player="prev">⏮</button>
+          <button class="icon-btn small primary" type="button" data-player="play">▶</button>
+          <button class="icon-btn small" type="button" data-player="next">⏭</button>
+        </div>
+        <div class="player-progress">
+          <span id="mini-time">0:00</span>
+          <input id="mini-seek" class="player-seek" type="range" min="0" max="100" value="0" aria-label="Seek audio" data-audio-seek />
+          <span id="mini-duration">3:56</span>
+        </div>
+        <div class="player-volume-wrap">
+          <button class="icon-btn small" type="button" data-player="mute">🔊</button>
+          <input id="mini-volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Listen to Majalisi recordings by Shehi Ahmad Tajul Izzi." />
+    <meta name="theme-color" content="#0c120f" />
+    <title>Majalisi | Shehi Ahmad Tajul Izzi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="audio-config.js"></script>
+    <script defer src="script.js?v=20261007"></script>
+  </head>
+  <body data-page="majalisi">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="index.html#home" class="brand" aria-label="Shehi Ahmad Tajul Izzi home">
+          <div class="brand-mark">S</div>
+          <div class="brand-copy">
+            <span class="brand-name">Official</span>
+            <span class="brand-title">SHEHI AHMAD TAJUL IZZI</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#featured">Latest Music</a>
+          <a href="index.html#madarisi" class="active">Majalisi</a>
+          <a href="index.html#all-music">Music</a>
+        </nav>
+        <div class="top-actions">
+          <a class="secondary-btn" href="index.html#madarisi">All Majalisi</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="majalisi-page-root"></main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <span>© 2026 Shehi Ahmad Tajul Izzi.</span>
+        <a href="index.html#home">Back to home</a>
+      </div>
+    </footer>
+
+    <div class="bottom-player">
+      <div class="player-wrap container">
+        <div class="player-art">
+          <img id="mini-cover" src="items/daiman.png" alt="Now playing" />
+        </div>
+        <div class="player-text">
+          <strong id="mini-title">Daiman</strong>
+          <span id="mini-artist">Shehi Ahmad Tajul Izzi</span>
+        </div>
+        <div class="player-controls">
+          <button class="icon-btn small" type="button" data-player="prev" aria-label="Previous">⏮</button>
+          <button class="icon-btn small primary" type="button" data-player="play" aria-label="Play or pause">▶</button>
+          <button class="icon-btn small" type="button" data-player="next" aria-label="Next">⏭</button>
+        </div>
+        <div class="player-progress">
+          <span id="mini-time">0:00</span>
+          <input id="mini-seek" class="player-seek" type="range" min="0" max="100" value="0" aria-label="Seek audio" data-audio-seek />
+          <span id="mini-duration">0:00</span>
+        </div>
+        <div class="player-volume-wrap">
+          <button class="icon-btn small" type="button" data-player="mute" aria-label="Mute">🔊</button>
+          <input id="mini-volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

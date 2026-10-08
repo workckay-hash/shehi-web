@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latest Music | Shehi Ahmad Tajul Izzi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">T</div>
+          <div>
+            <span class="brand-name">Official</span>
+            <span class="brand-title">SHEHI AHMAD TAJUL IZZI</span>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="latest.html" class="active" data-i18n="latest">Latest Music</a>
+          <a href="majalisi.html" data-i18n="majalisi">Majalisi</a>
+          <a href="reels.html" data-i18n="reels">Reels</a>
+          <a href="albums.html" data-i18n="albums">Albums</a>
+          <a href="about.html" data-i18n="about">About</a>
+        </nav>
+        <div class="top-actions">
+          <label class="search-box" aria-label="search">
+            <span>⌕</span>
+            <input type="text" data-i18n-placeholder="search" placeholder="Search music, Majalisi or albums..." />
+          </label>
+          <button id="langToggle" class="lang-btn" type="button">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding-top: 36px;">
+      <div class="section-head">
+        <h2 data-i18n="latest">Latest Music</h2>
+        <div class="chips">
+          <button class="chip active" type="button" data-i18n="newest">Newest</button>
+          <button class="chip" type="button" data-i18n="mostPlayed">Most Played</button>
+          <button class="chip" type="button" data-i18n="popular">Popular</button>
+          <button class="chip" type="button" data-i18n="az">A–Z</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-art">
+            <img src="items/2025.png" alt="Daiman" />
+            <span class="tag">Featured</span>
+            <button class="play-badge" type="button">▶</button>
+          </div>
+          <div class="card-body">
+            <div class="card-row"><strong>Daiman</strong><span class="tag" style="position:static;">2026</span></div>
+            <div class="card-meta"><span>Shehi Ahmad Tajul Izzi</span><span>24:59</span></div>
+            <div class="card-actions">
+              <button class="track-btn" type="button">♡</button>
+              <button class="track-btn" type="button">↗</button>
+              <button class="download-btn" type="button">MP3 Download</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-art">
+            <img src="items/2025.png" alt="Girma Da Buwaya" />
+            <span class="tag">New</span>
+            <button class="play-badge" type="button">▶</button>
+          </div>
+          <div class="card-body">
+            <div class="card-row"><strong>Girma Da Buwaya</strong><span class="tag" style="position:static;">2026</span></div>
+            <div class="card-meta"><span>Shehi Ahmad Tajul Izzi</span><span>05:14</span></div>
+            <div class="card-actions">
+              <button class="track-btn" type="button">♡</button>
+              <button class="track-btn" type="button">↗</button>
+              <button class="download-btn" type="button">MP3 Download</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-art">
+            <img src="items/2025.png" alt="Ahmadu Ajwadu" />
+            <span class="tag">Popular</span>
+            <button class="play-badge" type="button">▶</button>
+          </div>
+          <div class="card-body">
+            <div class="card-row"><strong>Ahmadu Ajwadu</strong><span class="tag" style="position:static;">2025</span></div>
+            <div class="card-meta"><span>Shehi Ahmad Tajul Izzi</span><span>04:44</span></div>
+            <div class="card-actions">
+              <button class="track-btn" type="button">♡</button>
+              <button class="track-btn" type="button">↗</button>
+              <button class="download-btn disabled" type="button">No Download</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-art">
+            <img src="items/2025.png" alt="Sarki Tsayayye" />
+            <span class="tag">Classic</span>
+            <button class="play-badge" type="button">▶</button>
+          </div>
+          <div class="card-body">
+            <div class="card-row"><strong>Sarki Tsayayye</strong><span class="tag" style="position:static;">2025</span></div>
+            <div class="card-meta"><span>Shehi Ahmad Tajul Izzi</span><span>05:01</span></div>
+            <div class="card-actions">
+              <button class="track-btn" type="button">♡</button>
+              <button class="track-btn" type="button">↗</button>
+              <button class="download-btn" type="button">MP3 Download</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script src="audio-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

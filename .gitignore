@@ -1,0 +1,6 @@
+node_modules/
+.netlify/
+dist/
+music/
+majalisi/
+items/*.mp3
