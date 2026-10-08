@@ -6,7 +6,7 @@ const output = path.join(root, 'dist');
 const audioBaseUrl = process.env.SHEHI_AUDIO_BASE_URL?.trim().replace(/\/+$/, '');
 
 if (!audioBaseUrl) {
-  throw new Error('Set SHEHI_AUDIO_BASE_URL to your public R2 bucket URL before building.');
+  throw new Error('Set SHEHI_AUDIO_BASE_URL to your public audio bucket URL before building.');
 }
 
 if (new URL(audioBaseUrl).protocol !== 'https:') {
@@ -32,4 +32,4 @@ fs.writeFileSync(
 );
 fs.copyFileSync(path.join(root, 'script.js'), path.join(output, 'script.js'));
 
-console.log('Built static site in dist/ (audio folders are hosted separately).');
+console.log('Built static site in dist/ (audio files are hosted separately).');
